@@ -462,7 +462,7 @@
     
     <div class="col s12 m6" >
         
-             <div class="post-card" style="background-image: url('/medias/featureimages/8.jpg')">
+             <div class="post-card" style="background-image: url('/medias/featureimages/19.jpg')">
         
             <div class="post-body">
                 <div class="post-categories">
@@ -565,7 +565,7 @@
                     <a href="/9/">
                         <div class="card-image">
                             
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="OOP学习笔记">
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="OOP学习笔记">
                             
                             <span class="card-title">OOP学习笔记</span>
                         </div>
@@ -911,6 +911,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
