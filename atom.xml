@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Endeavor</title>
+  
+  <subtitle>Normal No More</subtitle>
+  <link href="http://shangzz2001.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://shangzz2001.github.io/"/>
+  <updated>2022-10-06T12:24:12.000Z</updated>
+  <id>http://shangzz2001.github.io/</id>
+  
+  <author>
+    <name>Chengsx</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git入门学习</title>
+    <link href="http://shangzz2001.github.io/9/"/>
+    <id>http://shangzz2001.github.io/9/</id>
+    <published>2022-10-04T11:26:23.000Z</published>
+    <updated>2022-10-06T12:24:12.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;what-are-vcss&quot;&gt;What Are VCSs?&lt;/h2&gt;
+&lt;p&gt;Version control systems (VCSs) are tools used to track changes to a
+folder and its contents</summary>
+        
+      
+    
+    
+    
+    <category term="CS" scheme="http://shangzz2001.github.io/categories/CS/"/>
+    
+    <category term="Git" scheme="http://shangzz2001.github.io/categories/CS/Git/"/>
+    
+    
+    <category term="Git" scheme="http://shangzz2001.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>几何一窥</title>
+    <link href="http://shangzz2001.github.io/8/"/>
+    <id>http://shangzz2001.github.io/8/</id>
+    <published>2022-09-30T08:33:04.000Z</published>
+    <updated>2022-10-06T12:23:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;\(I\)&lt;/span&gt;是&lt;span class=&quot;math inline&quot;&gt;\(\triangle ABC\)&lt;/span&gt;内心, &lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/categories/Maths/"/>
+    
+    <category term="Geometry" scheme="http://shangzz2001.github.io/categories/Maths/Geometry/"/>
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/tags/Maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高等代数选讲</title>
+    <link href="http://shangzz2001.github.io/7/"/>
+    <id>http://shangzz2001.github.io/7/</id>
+    <published>2022-09-25T14:45:24.000Z</published>
+    <updated>2022-10-06T12:23:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;chapter-1-抽象线性空间理论&quot;&gt;Chapter 1 抽象线性空间理论&lt;/h2&gt;
+&lt;h3 id=&quot;definition-1&quot;&gt;Definition 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;给定线性空间 &lt;span class=&quot;math</summary>
+        
+      
+    
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/categories/Maths/"/>
+    
+    <category term="Algebra" scheme="http://shangzz2001.github.io/categories/Maths/Algebra/"/>
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/tags/Maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>代数一隅</title>
+    <link href="http://shangzz2001.github.io/6/"/>
+    <id>http://shangzz2001.github.io/6/</id>
+    <published>2022-09-20T01:59:14.000Z</published>
+    <updated>2022-10-06T12:22:50.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;正项数列 &lt;span class=&quot;math inline&quot;&gt;\(\{a_n\}\)&lt;/span&gt; 满足 &lt;span class=&quot;math</summary>
+        
+      
+    
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/categories/Maths/"/>
+    
+    <category term="Algebra" scheme="http://shangzz2001.github.io/categories/Maths/Algebra/"/>
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/tags/Maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>几何一窥</title>
+    <link href="http://shangzz2001.github.io/5/"/>
+    <id>http://shangzz2001.github.io/5/</id>
+    <published>2022-09-14T08:33:04.000Z</published>
+    <updated>2022-10-06T12:14:20.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设&lt;span class=&quot;math inline&quot;&gt;\(O, H\)&lt;/span&gt;分别为&lt;span class=&quot;math inline&quot;&gt;\(\triangle ABC\)&lt;/span&gt;的外心和垂心,</summary>
+        
+      
+    
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/categories/Maths/"/>
+    
+    <category term="Geometry" scheme="http://shangzz2001.github.io/categories/Maths/Geometry/"/>
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/tags/Maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高联一试模拟试题解答</title>
+    <link href="http://shangzz2001.github.io/4/"/>
+    <id>http://shangzz2001.github.io/4/</id>
+    <published>2022-09-10T07:00:00.000Z</published>
+    <updated>2022-10-06T12:22:28.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;全国高中数学联合竞赛一试模拟试题&quot;&gt;全国高中数学联合竞赛一试模拟试题&lt;/h1&gt;
+&lt;h4 id=&quot;一填空题&quot;&gt;&lt;strong&gt;一、填空题&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; 若点&lt;span class=&quot;math</summary>
+        
+      
+    
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/categories/Maths/"/>
+    
+    <category term="Test" scheme="http://shangzz2001.github.io/categories/Maths/Test/"/>
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/tags/Maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>几何一窥</title>
+    <link href="http://shangzz2001.github.io/3/"/>
+    <id>http://shangzz2001.github.io/3/</id>
+    <published>2022-09-05T08:33:04.000Z</published>
+    <updated>2022-10-06T12:22:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;span class=&quot;math inline&quot;&gt;\(\triangle ABC\)&lt;/span&gt;中, &lt;span class=&quot;math inline&quot;&gt;\(\angle</summary>
+        
+      
+    
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/categories/Maths/"/>
+    
+    <category term="Geometry" scheme="http://shangzz2001.github.io/categories/Maths/Geometry/"/>
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/tags/Maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高联一试模拟试题</title>
+    <link href="http://shangzz2001.github.io/2/"/>
+    <id>http://shangzz2001.github.io/2/</id>
+    <published>2022-09-01T06:00:00.000Z</published>
+    <updated>2022-10-06T12:13:50.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;全国高中数学联合竞赛一试模拟试题&quot;&gt;全国高中数学联合竞赛一试模拟试题&lt;/h1&gt;
+&lt;h4 id=&quot;一填空题&quot;&gt;&lt;strong&gt;一、填空题&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; 若点&lt;span class=&quot;math</summary>
+        
+      
+    
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/categories/Maths/"/>
+    
+    <category term="Test" scheme="http://shangzz2001.github.io/categories/Maths/Test/"/>
+    
+    
+    <category term="Maths" scheme="http://shangzz2001.github.io/tags/Maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello, World!</title>
+    <link href="http://shangzz2001.github.io/1/"/>
+    <id>http://shangzz2001.github.io/1/</id>
+    <published>2022-08-26T13:00:00.000Z</published>
+    <updated>2022-10-06T12:21:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://chengsx21.github.io/&quot;&gt;Endeavor&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;This is my very first post.&lt;/p&gt;
+&lt;p&gt;If you get any problems when</summary>
+        
+      
+    
+    
+    
+    <category term="CS" scheme="http://shangzz2001.github.io/categories/CS/"/>
+    
+    <category term="Other" scheme="http://shangzz2001.github.io/categories/CS/Other/"/>
+    
+    
+    <category term="Programming" scheme="http://shangzz2001.github.io/tags/Programming/"/>
+    
+  </entry>
+  
+</feed>
