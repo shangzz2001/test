@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Odysseus</title>
+  
+  <subtitle>Welcome To My World</subtitle>
+  <link href="http://shangzz2001.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://shangzz2001.github.io/"/>
+  <updated>2022-10-06T12:24:12.000Z</updated>
+  <id>http://shangzz2001.github.io/</id>
+  
+  <author>
+    <name>Shangzz</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git入门学习</title>
+    <link href="http://shangzz2001.github.io/9/"/>
+    <id>http://shangzz2001.github.io/9/</id>
+    <published>2022-10-04T11:26:23.000Z</published>
+    <updated>2022-10-06T12:24:12.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;what-are-vcss&quot;&gt;What Are VCSs?&lt;/h2&gt;
+&lt;p&gt;Version control systems (VCSs) are tools used to track changes to a
+folder and its contents</summary>
+        
+      
+    
+    
+    
+    <category term="CS" scheme="http://shangzz2001.github.io/categories/CS/"/>
+    
+    <category term="Git" scheme="http://shangzz2001.github.io/categories/CS/Git/"/>
+    
+    
+    <category term="Git" scheme="http://shangzz2001.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello, World!</title>
+    <link href="http://shangzz2001.github.io/1/"/>
+    <id>http://shangzz2001.github.io/1/</id>
+    <published>2022-08-26T13:00:00.000Z</published>
+    <updated>2022-10-06T12:21:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://chengsx21.github.io/&quot;&gt;Endeavor&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;This is my very first post.&lt;/p&gt;
+&lt;p&gt;If you get any problems when</summary>
+        
+      
+    
+    
+    
+    <category term="CS" scheme="http://shangzz2001.github.io/categories/CS/"/>
+    
+    <category term="Other" scheme="http://shangzz2001.github.io/categories/CS/Other/"/>
+    
+    
+    <category term="Programming" scheme="http://shangzz2001.github.io/tags/Programming/"/>
+    
+  </entry>
+  
+</feed>

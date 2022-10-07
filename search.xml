@@ -2,6 +2,60 @@
 <search> 
   
   
+    
+    <entry>
+      <title>Git入门学习</title>
+      <link href="/9/"/>
+      <url>/9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="what-are-vcss">What Are VCSs?</h2><p>Version control systems (VCSs) are tools used to track changes to afolder and its contents in a series of snapshots. They also maintainmetadata like who created each snapshot, messages associated with eachsnapshot, and so on.</p><p>While other VCSs exist, <strong>Git</strong> is the de facto standardfor version control.</p><h2 id="data-model">Data Model</h2><p>Git has a well-thought-out model that enables maintaining history,supporting branches, and collaboration.</p><h3 id="snapshots">Snapshots</h3><p>Git models the history of a collection of files and folders withinsome top-level directory as a series of snapshots.</p><ul><li>File -- Blob</li><li>Directory -- Tree</li><li>Snapshot -- The top-level tree being tracked</li></ul><h3 id="history-relating-snapshots">History: Relating snapshots</h3><p>In Git, a history is a directed acyclic graph (DAG) of snapshots.This means that each snapshot in Git refers to a set of “parents”, thesnapshots that preceded it. Moreover, a snapshot might descend frommultiple parents due to combining (merging) two parallel branches ofdevelopment.</p><h3 id="data-model-as-pseudocode">Data model: As pseudocode</h3><p>It is instructive to see Git’s data model written down inpseudocode.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span> blob <span class="token operator">=</span> array<span class="token operator">&lt;</span>byte<span class="token operator">&gt;</span><span class="token builtin">type</span> tree <span class="token operator">=</span> <span class="token builtin">map</span><span class="token operator">&lt;</span>string<span class="token punctuation">,</span> tree <span class="token operator">|</span> blob<span class="token operator">&gt;</span><span class="token builtin">type</span> commit <span class="token operator">=</span> struct <span class="token punctuation">{</span>    parents<span class="token punctuation">:</span> array<span class="token operator">&lt;</span>commit<span class="token operator">&gt;</span>    author<span class="token punctuation">:</span> string    message<span class="token punctuation">:</span> string    snapshot<span class="token punctuation">:</span> tree<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="objects-and-content-addressing">Objects andContent-Addressing</h3><p>An “object” is a blob, tree, or commit. In Git data store, allobjects are content-addressed by <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1 hash</a>.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span> <span class="token builtin">object</span> <span class="token operator">=</span> blob <span class="token operator">|</span> tree <span class="token operator">|</span> commitobjects <span class="token operator">=</span> <span class="token builtin">map</span><span class="token operator">&lt;</span>string<span class="token punctuation">,</span> <span class="token builtin">object</span><span class="token operator">&gt;</span><span class="token keyword">def</span> <span class="token function">store</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token builtin">id</span> <span class="token operator">=</span> sha1<span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span>    objects<span class="token punctuation">[</span><span class="token builtin">id</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">object</span><span class="token keyword">def</span> <span class="token function">load</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">return</span> objects<span class="token punctuation">[</span><span class="token builtin">id</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="references">References</h3><p>Git’s solution is human-readable names for SHA-1 hashes, called"references". References are mutable pointers to commits. For example,the <code>master</code> reference usually points to the latest commit inthe main branch of development. Moreover, "where we currently are" is aspecial reference called “HEAD”.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">references <span class="token operator">=</span> <span class="token builtin">map</span><span class="token operator">&lt;</span>string<span class="token punctuation">,</span> string<span class="token operator">&gt;</span><span class="token keyword">def</span> <span class="token function">update_reference</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    references<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">id</span><span class="token keyword">def</span> <span class="token function">read_reference</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">return</span> references<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token keyword">def</span> <span class="token function">load_reference</span><span class="token punctuation">(</span>name_or_id<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">if</span> name_or_id <span class="token keyword">in</span> references<span class="token punctuation">:</span>        <span class="token keyword">return</span> load<span class="token punctuation">(</span>references<span class="token punctuation">[</span>name_or_id<span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token keyword">else</span><span class="token punctuation">:</span>        <span class="token keyword">return</span> load<span class="token punctuation">(</span>name_or_id<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="repositories">Repositories</h3><p>A Git <em>repository</em> is the data <code>objects</code> and<code>references</code>.</p><h2 id="staging-area">Staging Area</h2><p>For example, imagine a scenario where you have debugging printstatements added all over your code, along with a bugfix; you want tocommit the bugfix while discarding all the print statements.</p><p>Git accommodates such scenarios by allowing you to specify whichmodifications should be included in the next snapshot through amechanism called the “staging area”.</p><h2 id="command-line-interface">Command-Line Interface</h2><h3 id="basics">Basics</h3><ul><li><code>git help &lt;command&gt;</code>: get help for a command</li><li><code>git init</code>: create a new git repo with data stored in the<code>.git</code> directory</li><li><code>git status</code>: tell what is going on</li><li><code>git add &lt;filename&gt;</code>: add files to stagingarea</li><li><code>git commit</code>: create a new commit<ul><li>Write <a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">goodcommit messages</a>!</li><li>More reasons to write <a href="https://chris.beams.io/posts/git-commit/">good commitmessages</a>!</li></ul></li><li><code>git log</code>: show a flattened log of history</li><li><code>git log --all --graph --decorate</code>: visualizes history asa DAG</li><li><code>git diff &lt;filename&gt;</code>: show changes made to thestaging area</li><li><code>git diff &lt;revision&gt; &lt;filename&gt;</code>: showdifferences in a file between snapshots</li><li><code>git checkout &lt;revision&gt;</code>: update HEAD and currentbranch</li></ul><h3 id="branching-and-merging">Branching and Merging</h3><ul><li><code>git branch</code>: show branches</li><li><code>git branch &lt;name&gt;</code>: create a branch</li><li><code>git checkout -b &lt;name&gt;</code>: create a branch andswitch to it</li><li><code>git merge &lt;revision&gt;</code>: merge into currentbranch</li><li><code>git mergetool</code>: use a fancy tool to help resolve mergeconflicts</li><li><code>git rebase</code>: rebase set of patches onto a new base</li></ul><h3 id="remotes">Remotes</h3><ul><li><code>git remote</code>: list remotes</li><li><code>git remote add &lt;name&gt; &lt;url&gt;</code>: add aremote</li><li><code>git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;</code>:send objects to remote and update remote reference</li><li><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;</code>:set up correspondence between local and remote branch</li><li><code>git fetch</code>: retrieve objects/references from aremote</li><li><code>git pull</code>: same as<code>git fetch; git merge</code></li><li><code>git clone</code>: download repository from remote</li></ul><h3 id="undo">Undo</h3><ul><li><code>git config</code>: Git is <a href="https://git-scm.com/docs/git-config">highly customizable</a></li><li><code>git clone --depth=1</code>: shallow clone, without entireversion history</li><li><code>git add -p</code>: interactive staging</li><li><code>git rebase -i</code>: interactive rebasing</li><li><code>git blame</code>: show who last edited which line</li><li><code>git stash</code>: temporarily remove modifications to workingdirectory</li><li><code>git bisect</code>: binary search history</li><li><code>.gitignore</code>: <a href="https://git-scm.com/docs/gitignore">specify</a> intentionallyuntracked files to ignore</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> CS </category>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello, World!</title>
+      <link href="/1/"/>
+      <url>/1/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://chengsx21.github.io/">Endeavor</a>!</p><p>This is my very first post.</p><p>If you get any problems when using this site, you can always ask meon <a href="https://github.com/chengsx21/chengsx21.github.io/issues">GitHub</a>.</p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"># include &lt;iostream&gt;using namespace std;int main() {    cout &lt;&lt; "Hello world!" &lt;&lt; endl;    cout &lt;&lt; "Welcome to Endeavor!" &lt;&lt; endl;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> CS </category>
+          
+          <category> Other </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
