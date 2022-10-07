@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Endeavor</title>
+  <title>Odysseus</title>
   
-  <subtitle>Normal No More</subtitle>
+  <subtitle>Welcome To My World</subtitle>
   <link href="http://shangzz2001.github.io/atom.xml" rel="self"/>
   
   <link href="http://shangzz2001.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://shangzz2001.github.io/</id>
   
   <author>
-    <name>Chengsx</name>
+    <name>Shangzz</name>
     
   </author>
   
