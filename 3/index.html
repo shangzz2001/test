@@ -407,8 +407,7 @@
                 <h2 id="l3-封装与接口">L3-封装与接口</h2>
 <h4 id="函数重载与缺省值">3.1 函数重载与缺省值</h4>
 <blockquote>
-<p>为什么需要函数重载：
-同一任务，但输入信息的类型不同；同一任务，函数输入信息的存储形式不同</p>
+<p>为什么需要函数重载： 同一任务，但输入信息的类型不同；同一任务，函数输入信息的存储形式不同</p>
 </blockquote>
 <p>注意：多个同名的函数实现之间，必须保证至少有一个函数参数的类型有区别。<strong><em>返回值、参数名称</em></strong>等不能作为区分标识。</p>
 <blockquote>
@@ -419,8 +418,7 @@
 <h4 id="基础知识">3.2 基础知识</h4>
 <ol type="1">
 <li><p>auto(C++11)：由编译器根据上下文自动确定变量的类型；</p>
-<p>注意：auto 变量必须在编译期确定其类型；auto
-变量必须在定义时初始化；参数不能被声明为auto；</p>
+<p>注意：auto 变量必须在编译期确定其类型；auto 变量必须在定义时初始化；参数不能被声明为auto；</p>
 <p>需要注意的用法：追踪返回类型的函数声明形式；替换冗长变量声明；在定义模板函数时，用于声明依赖模板参数的变量类型。</p>
 <pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">auto func(char* ptr, int val) -&gt; int;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>decltype：可以对变量或表达式结果的类型进行推导</p>
@@ -520,17 +518,12 @@ ostream&amp; operator&lt;&lt; (ostream&amp; out, const Test&amp; src );<span ari
 <p>由于本人掌握的并不好，所以重点进行了一些复习回顾。</p>
 <p>回顾C中的静态变量与静态函数：</p>
 <blockquote>
-<p>静态变量：使用static修饰的变量：static int i = 1;
-1.初始化：初次定义时需要初始化，且只能初始化一次。
-2.静态局部变量存储在静态存储区，生命周期将持续到整个程序结束
-3.静态全局变量是内部可链接的，作用域仅限其声明的文件，不能被其他文件所用，可以避免和其他文件中的同名变量冲突</p>
-<p>静态函数：使用static修饰的函数：static int func() {…}
-静态函数是内部可链接的，作用域仅限其声明的文件，不能被其他文件所用，可以避免和其他文件中的同名函数冲突</p>
+<p>静态变量：使用static修饰的变量：static int i = 1; 1.初始化：初次定义时需要初始化，且只能初始化一次。 2.静态局部变量存储在静态存储区，生命周期将持续到整个程序结束 3.静态全局变量是内部可链接的，作用域仅限其声明的文件，不能被其他文件所用，可以避免和其他文件中的同名变量冲突</p>
+<p>静态函数：使用static修饰的函数：static int func() {…} 静态函数是内部可链接的，作用域仅限其声明的文件，不能被其他文件所用，可以避免和其他文件中的同名函数冲突</p>
 </blockquote>
 <p>一些区别：</p>
 <blockquote>
-<p>静态全局变量/静态函数<strong><em>是内部可链接的</em></strong>，作用域仅限其声明的文件，不能被其他文件所用
-非静态全局变量/非静态全局函数是<strong><em>外部可链接的，可以被其他文件所用</em></strong></p>
+<p>静态全局变量/静态函数<strong><em>是内部可链接的</em></strong>，作用域仅限其声明的文件，不能被其他文件所用 非静态全局变量/非静态全局函数是<strong><em>外部可链接的，可以被其他文件所用</em></strong></p>
 </blockquote>
 <blockquote>
 <p>==有关静态数据成员==：</p>
@@ -544,10 +537,8 @@ ostream&amp; operator&lt;&lt; (ostream&amp; out, const Test&amp; src );<span ari
 <p>回顾C语言中的const常量：</p>
 <blockquote>
 <p>修饰变量时（如const int n = 1;），必须就地初始化;</p>
-<p>修饰引用/指针时（如int a=1; const int&amp;
-b=a;），不能通过该引用/指针修改相应变量的值;</p>
-<p>修饰函数返回值时（如const int* func()
-{…}），函数返回值的内容（或其指向的内容）不能被修改</p>
+<p>修饰引用/指针时（如int a=1; const int&amp; b=a;），不能通过该引用/指针修改相应变量的值;</p>
+<p>修饰函数返回值时（如const int* func() {…}），函数返回值的内容（或其指向的内容）不能被修改</p>
 </blockquote>
 <blockquote>
 <p>有关常量数据成员：构造函数的初始化列表中被初始化；就地初始化；</p>
@@ -556,17 +547,13 @@ b=a;），不能通过该引用/指针修改相应变量的值;</p>
 <blockquote>
 <p>有关常量成员函数：</p>
 <p>访问权限：实现语句不能修改类的数据成员，即不能改变对象状态（内容）</p>
-<p>对象被定义为常量(const ClassName
-a;)，则它只能调用以const修饰的成员函数</p>
+<p>对象被定义为常量(const ClassName a;)，则它只能调用以const修饰的成员函数</p>
 </blockquote>
 <p>常量静态变量：</p>
 <p>需要在类外进行定义（但有两个例外：int和enum类型可以就地初始化）</p>
 <p>注意：</p>
 <blockquote>
-<p>函数中静态对象：在函数内部定义的静态局部对象
-在程序执行到该静态局部对象的代码时被初始化。 离开作用域不析构。
-第二次执行到该对象代码时，不再初始化，直接使用上一次的对象
-在main()函数结束后被析构。</p>
+<p>函数中静态对象：在函数内部定义的静态局部对象 在程序执行到该静态局部对象的代码时被初始化。 离开作用域不析构。 第二次执行到该对象代码时，不再初始化，直接使用上一次的对象 在main()函数结束后被析构。</p>
 </blockquote>
 <h2 id="l6-引用与复制">L6-引用与复制</h2>
 <h4 id="常量引用">6.1常量引用</h4>
@@ -579,8 +566,7 @@ a;)，则它只能调用以const修饰的成员函数</p>
 </blockquote>
 <p>被调用的三种情况：</p>
 <ol type="1">
-<li><p>用一个类对象定义另一个新的类对象:Test a; Test b(a); Test c =
-a;</p></li>
+<li><p>用一个类对象定义另一个新的类对象:Test a; Test b(a); Test c = a;</p></li>
 <li><p>函数调用时以类的对象为形参:Func(Test a)</p></li>
 <li><p>函数返回类对象:Test Func(void)</p></li>
 </ol>
@@ -631,13 +617,11 @@ public:
 };
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>编译器自动进行返回值优化的条件：return
-的值类型与函数签名的返回值类型相同；return的是一个局部对象。</p>
+<p>编译器自动进行返回值优化的条件：return 的值类型与函数签名的返回值类型相同；return的是一个局部对象。</p>
 </blockquote>
 <p>std::move函数：move函数本身不对对象做任何操作，仅做类型转换，即转换为右值。移动的具体操作在移动构造函数内实现。</p>
 <blockquote>
-<p>注意：函数返回类对象（类中显式定义移动构造函数，不进行返回值优化）:
-{return Test(); or return tmp;}均调用移动构造</p>
+<p>注意：函数返回类对象（类中显式定义移动构造函数，不进行返回值优化）: {return Test(); or return tmp;}均调用移动构造</p>
 </blockquote>
 <p>有关拷贝赋值运算符的注意点：必须要是类的非静态成员函数，不能是友元函数。</p>
 <h4 id="类型转换">6.6类型转换</h4>
@@ -691,10 +675,8 @@ public:
 <ol type="1">
 <li><p>基类中的私有成员：不允许在派生类成员函数中访问，也不允许派生类的对象访问它们。真正体现“基类私有”，对派生类也不开放其权限！</p></li>
 <li><p>基类中的公有成员：允许在派生类成员函数中被访问；</p>
-<p>若是使用public继承方式，则成为派生类公有成员，可以被派生类的对象访问；
-若是使用private/protected继承方式，则成为派生类私有/保护成员，不能被派生类的对象访问。若想让某成员能被派生类的对象访问，可在派生类public部分用关键字using声明它的名字。</p></li>
-<li><p>基类中的保护成员：
-保护成员允许在派生类成员函数中被访问，但不能被外部函数访问。</p></li>
+<p>若是使用public继承方式，则成为派生类公有成员，可以被派生类的对象访问； 若是使用private/protected继承方式，则成为派生类私有/保护成员，不能被派生类的对象访问。若想让某成员能被派生类的对象访问，可在派生类public部分用关键字using声明它的名字。</p></li>
+<li><p>基类中的保护成员： 保护成员允许在派生类成员函数中被访问，但不能被外部函数访问。</p></li>
 </ol>
 <h4 id="重写隐藏与重载">7.4重写隐藏与重载</h4>
 <blockquote>
@@ -705,8 +687,7 @@ public:
 <p>重写隐藏：在派生类中重新定义基类函数，实现派生类的特殊功能。屏蔽了基类的所有其它同名函数。</p>
 <p>函数名必须相同，函数参数可以不同</p>
 </blockquote>
-<p>To be
-attention：重写隐藏发生时，基类中该成员函数的其他重载函数都将被屏蔽掉，不能提供给派生类对象使用</p>
+<p>To be attention：重写隐藏发生时，基类中该成员函数的其他重载函数都将被屏蔽掉，不能提供给派生类对象使用</p>
 <h5 id="多重继承的问题">多重继承的问题：</h5>
 <p>数据存储的冗余与二义性</p>
 <h2 id="l8-虚函数">L8-虚函数</h2>
@@ -721,18 +702,11 @@ attention：重写隐藏发生时，基类中该成员函数的其他重载函�
 <h4 id="虚函数">8.3虚函数</h4>
 <blockquote>
 <p>虚函数的晚捆绑：编译器将根据所指（或引用）对象的实际类型决定是调用基类中的函数，还是调用派生类重写的函数</p>
-<p>注意：当派生类重写覆盖它时(同名，同参数函数)
-，无论是否声明为虚函数，该成员函数都仍然是虚函数。</p>
+<p>注意：当派生类重写覆盖它时(同名，同参数函数) ，无论是否声明为虚函数，该成员函数都仍然是虚函数。</p>
 </blockquote>
 <p>构造函数不能也不必是虚函数（构造函数中调用的虚函数不起作用），析构函数常常是虚的</p>
 <h5 id="重载重写隐藏与重写覆盖">重载、重写隐藏与重写覆盖</h5>
 <table>
-<colgroup>
-<col style="width: 7%">
-<col style="width: 33%">
-<col style="width: 39%">
-<col style="width: 19%">
-</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -780,8 +754,7 @@ attention：重写隐藏发生时，基类中该成员函数的其他重载函�
 </blockquote>
 <blockquote>
 <p>final关键词：</p>
-<p>在虚函数声明或定义中使用时，final确保函数为虚且不可被派生类重写。禁止后续派生类对指定虚函数重写。
-在类定义中使用时，final指定此类不可被继承。</p>
+<p>在虚函数声明或定义中使用时，final确保函数为虚且不可被派生类重写。禁止后续派生类对指定虚函数重写。 在类定义中使用时，final指定此类不可被继承。</p>
 </blockquote>
 <h2 id="l9-多态与模版">L9-多态与模版</h2>
 <h4 id="纯虚函数与抽象类">9.1纯虚函数与抽象类</h4>
@@ -816,21 +789,13 @@ T2&amp; refObj = static_cast&lt;T2&amp;&gt;(obj_r);
 <summary>
 dynamic_cast与static_cast
 </summary>
-相同点：都可完成向下类型转换。 <br> 不同点：
-static_cast在编译时静态执行向下类型转换。
-<br>dynamic_cast会在运行时检查被转换的对象是否确实是正确的派生类。额外的检查需要
-RTTI (Run-Time Type
-Information)，因此要比static_cast慢一些，但是更安全。
+相同点：都可完成向下类型转换。 <br> 不同点： static_cast在编译时静态执行向下类型转换。 <br>dynamic_cast会在运行时检查被转换的对象是否确实是正确的派生类。额外的检查需要 RTTI (Run-Time Type Information)，因此要比static_cast慢一些，但是更安全。
 </details>
 <details>
 <summary>
 向上与向下类型转换
 </summary>
-向上类型转换：
-<br>转换为基类指针或引用，则对应虚函数表仍为派生类的虚函数表（晚绑定）。
-<br>转换为基类对象，产生对象切片，调用基类函数（早绑定）。
-<br>向下类型转换：
-<br>dynamic_cast通过虚函数表来判断是否能进行向下类型转换。
+向上类型转换： <br>转换为基类指针或引用，则对应虚函数表仍为派生类的虚函数表（晚绑定）。 <br>转换为基类对象，产生对象切片，调用基类函数（早绑定）。 <br>向下类型转换： <br>dynamic_cast通过虚函数表来判断是否能进行向下类型转换。
 </details>
 <h4 id="多重继承中的虚函数">9.3多重继承中的虚函数</h4>
 <blockquote>
@@ -880,8 +845,7 @@ class array {
 </blockquote>
 <h5 id="容器">容器：</h5>
 <blockquote>
-<p>包括：简单容器（simple container）、序列容器（sequence
-container）、关系容器（associative container）</p>
+<p>包括：简单容器（simple container）、序列容器（sequence container）、关系容器（associative container）</p>
 </blockquote>
 <ol type="1">
 <li><p>pair容器</p>
@@ -932,8 +896,7 @@ for(auto &amp; x : vec)//遍历<span aria-hidden="true" class="line-numbers-rows
 </blockquote></li>
 <li><p>map容器</p>
 <blockquote>
-<p>其值类型为pair&lt;Key,
-T&gt;。元素key必须互不相同。可以通过下标访问。可使用insert函数进行插入。</p>
+<p>其值类型为pair&lt;Key, T&gt;。元素key必须互不相同。可以通过下标访问。可使用insert函数进行插入。</p>
 </blockquote></li>
 </ol>
 <h5 id="容器的相关总结">==容器的相关总结：==</h5>
@@ -985,10 +948,8 @@ cout &lt;&lt; dec;	//还原十进制
 cout &lt;&lt; setw(3) &lt;&lt; setfill('*') &lt;&lt; 5 &lt;&lt; endl;//设置对齐长度为3，对齐字符为* -&gt; **5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>一点相关说明：</p>
 <blockquote>
-<p>setprecision ：
-一个类的对象。流操纵算子：借助辅助类，设置成员变量</p>
-<p>endl：是一个函数，等同于输出''，再清空缓冲区
-os.flush()，同时也是流操纵算子</p>
+<p>setprecision ： 一个类的对象。流操纵算子：借助辅助类，设置成员变量</p>
+<p>endl：是一个函数，等同于输出''，再清空缓冲区 os.flush()，同时也是流操纵算子</p>
 <p>==有关cout的复制问题==：重载流运算符要返回引用是为了避免复制，只允许移动，仅使用cout一个全局对象</p>
 <p>原因：减少复制开销；一个对象对应一个标准输出，符合OOP思想；多个对象之间无法同步输出状态</p>
 </blockquote>
@@ -1017,8 +978,7 @@ auto func = flag==1?increase:decrease; //使用auto自动推断<span aria-hidden
 </blockquote>
 <p>注意：</p>
 <blockquote>
-<p>实际上，greater<int>()是一个对象，greater是一个模板类，greater<int>
-用int实例化的，greater<int>() 该类的一个对象</int></int></int></p>
+<p>实际上，greater<int>()是一个对象，greater是一个模板类，greater<int> 用int实例化的，greater<int>() 该类的一个对象</int></int></int></p>
 <p><strong><em>这种对象被称为函数对象</em></strong></p>
 </blockquote>
 <p>函数对象的要求：</p>
@@ -1082,8 +1042,7 @@ sp = wp.lock()	//从弱引用获得一个智能指针<span aria-hidden="true" cl
 <h2 id="l14-行为型模式">L14-行为型模式</h2>
 <blockquote>
 <p>设计模式：在长期实践中，开发人员总结的优秀架构与解决方案。</p>
-<p>三大种类：行为型模式（Behavioral Patterns）、结构型模式（Structural
-Patterns）、创建型模式（Creational Patterns）</p>
+<p>三大种类：行为型模式（Behavioral Patterns）、结构型模式（Structural Patterns）、创建型模式（Creational Patterns）</p>
 <p><strong><em>各自的优势与特点：</em></strong></p>
 <p>行为型模式：关注对象行为功能上的抽象，旨在提升对象在行为功能上的可拓展性，<strong><em>以最少的代码变动完成功能的增减。</em></strong></p>
 <p>结构型模式：关注对象之间结构关系上的抽象，旨在<strong><em>提升对象结构的可维护性、代码健壮性</em></strong>，在结构层面上解耦合。</p>
@@ -1255,8 +1214,7 @@ OneData&amp; ArrayIterator::operator++(int) {
 <p>与上述基于继承的操作不同，是基于模版实现的。</p>
 <blockquote>
 <p>区别：</p>
-<p>继承：算法中需要使用迭代器的基类指针
-模板：更加简洁，算法可以使用迭代器对象；对每一种迭代器类型都会生成相应代码，使编译速度变慢、可执行文件变大</p>
+<p>继承：算法中需要使用迭代器的基类指针 模板：更加简洁，算法可以使用迭代器对象；对每一种迭代器类型都会生成相应代码，使编译速度变慢、可执行文件变大</p>
 </blockquote>
 <h2 id="l15-结构型模式">L15-结构型模式</h2>
 <blockquote>
@@ -1351,8 +1309,7 @@ private:
 <blockquote>
 <p>代理模式与适配模式的比较：</p>
 <p>相同：在被访问对象之上进行封装、提供被封装对象的功能接口供外部使用</p>
-<p>不同：代理不会改变接口，但适配器可能会、适配器不会增加控制，代理可能会。
-适配器的核心要素是变换接口，、代理的核心要素是分割访问对象与被访问对象以减少耦合，并能在中间增加各种控制功能</p>
+<p>不同：代理不会改变接口，但适配器可能会、适配器不会增加控制，代理可能会。 适配器的核心要素是变换接口，、代理的核心要素是分割访问对象与被访问对象以减少耦合，并能在中间增加各种控制功能</p>
 </blockquote>
 <h5 id="装饰器decorator">15.3装饰器（Decorator）</h5>
 <blockquote>
@@ -1390,8 +1347,7 @@ public:
 <li><p>装饰器与代理：</p>
 <p>相同点：改变对象的行为，可以把“装饰”看成是一连串的“代理”</p>
 <p>不同点：</p>
-<p>装饰器：为被装饰对象增加额外的行为；不影响被装饰对象的原有功能；不创建被装饰对象（将新功能添加到已有对象上）
-经常多重嵌套装饰</p>
+<p>装饰器：为被装饰对象增加额外的行为；不影响被装饰对象的原有功能；不创建被装饰对象（将新功能添加到已有对象上） 经常多重嵌套装饰</p>
 <p>代理：常用来对被代理对象进行更精细的控制；被代理对象不存在时常创建被代理对象；少见多重嵌套</p></li>
 </ol>
 </blockquote>
@@ -1809,7 +1765,7 @@ public:
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2022</span>
+                <span id="year">2022-2023</span>
             
             <a href="/about" target="_blank">Shangzz</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -1817,7 +1773,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.3k</span>
+                        class="white-color">12.7k</span>
             
             
             
