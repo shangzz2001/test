@@ -6,7 +6,7 @@
   <link href="http://shangzz2001.github.io/atom.xml" rel="self"/>
   
   <link href="http://shangzz2001.github.io/"/>
-  <updated>2023-01-18T14:14:57.952Z</updated>
+  <updated>2023-01-18T17:03:44.611Z</updated>
   <id>http://shangzz2001.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Set与Multiset</title>
+    <link href="http://shangzz2001.github.io/5/"/>
+    <id>http://shangzz2001.github.io/5/</id>
+    <published>2023-01-18T11:26:23.000Z</published>
+    <updated>2023-01-18T17:03:44.611Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;leetcode题干&quot;&gt;Leetcode题干&lt;/h3&gt;
+&lt;p&gt;给你两个整数 &lt;code&gt;m&lt;/code&gt; 和 &lt;code&gt;k&lt;/code&gt; ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 &lt;strong&gt;MK 平均值&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="CS" scheme="http://shangzz2001.github.io/categories/CS/"/>
+    
+    <category term="OI" scheme="http://shangzz2001.github.io/categories/CS/OI/"/>
+    
+    
+    <category term="OI" scheme="http://shangzz2001.github.io/tags/OI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法题解</title>
     <link href="http://shangzz2001.github.io/4/"/>
     <id>http://shangzz2001.github.io/4/</id>
     <published>2023-01-18T11:26:23.000Z</published>
-    <updated>2023-01-18T14:14:57.952Z</updated>
+    <updated>2023-01-18T16:49:53.372Z</updated>
     
     
       

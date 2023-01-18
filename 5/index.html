@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法题解, Odysseus">
-    <meta name="description" content="写在开始">
+    <meta name="keywords" content="Set与Multiset, Odysseus">
+    <meta name="description" content="有关Set与Multiset的一些用法">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>算法题解 | Odysseus</title>
+    <title>Set与Multiset | Odysseus</title>
     <link rel="icon" type="image/png" href="/image/favicon.png">
     
     <style>
@@ -302,12 +302,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">算法题解</h1>
+                    <h1 class="description center-align post-title">Set与Multiset</h1>
                 </div>
             </div>
         </div>
@@ -374,14 +374,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    26
+                    538
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -404,7 +404,77 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="写在一切一切的开始希望自己能有意义地走完这艰难的一路">写在一切一切的开始，希望自己能有意义地走完这艰难的一路。</h3>
+                <h3 id="leetcode题干">Leetcode题干</h3>
+<p>给你两个整数 <code>m</code> 和 <code>k</code> ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 <strong>MK 平均值</strong> 。</p>
+<p><strong>MK 平均值</strong> 按照如下步骤计算：</p>
+<ol type="1">
+<li>如果数据流中的整数少于 <code>m</code> 个，<strong>MK 平均值</strong> 为 <code>-1</code> ，否则将数据流中最后 <code>m</code> 个元素拷贝到一个独立的容器中。</li>
+<li>从这个容器中删除最小的 <code>k</code> 个数和最大的 <code>k</code> 个数。</li>
+<li>计算剩余元素的平均值，并 <strong>向下取整到最近的整数</strong> 。</li>
+</ol>
+<p>请你实现 <code>MKAverage</code> 类：</p>
+<ul>
+<li><code>MKAverage(int m, int k)</code> 用一个空的数据流和两个整数 <code>m</code> 和 <code>k</code> 初始化 <strong>MKAverage</strong> 对象。</li>
+<li><code>void addElement(int num)</code> 往数据流中插入一个新的元素 <code>num</code> 。</li>
+<li><code>int calculateMKAverage()</code> 对当前的数据流计算并返回 <strong>MK 平均数</strong> ，结果需 <strong>向下取整到最近的整数</strong> 。</li>
+</ul>
+<h3 id="解法总结">解法总结</h3>
+<p>本题考查对于有序集合 set 的一些用法，与之不同的在于，本题的 set 中的元素可以重复，所以我们使用 multiset ，允许集合中的元素出现重复</p>
+<h4 id="有序集合的一些基础用法">有序集合的一些基础用法：</h4>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;set&gt;
+#include &lt;iostream&gt;
+using namespace std;
+struct cmp
+{
+    bool operator()(const int ls, const int rs) const
+    {
+        return rs &lt; ls;
+    }
+};
+
+int main()
+{
+    set&lt;int&gt; test_1;
+    for (int i = 10; i &gt;= 0; i--)
+    {
+        test_1.insert(i);
+    }
+    for (auto s = test_1.begin(); s != test_1.end(); s++)
+    {
+        cout &lt;&lt; *s &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    set&lt;int, cmp&gt; test_2;
+    for (int i = 0; i &lt;= 10; i++)
+    {
+        test_2.insert(i);
+    }
+    for (auto s = test_2.begin(); s != test_2.end(); s++)
+    {
+        cout &lt;&lt; *s &lt;&lt; " ";
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>有序集合一般情况下都是从小到大排序</li>
+<li>可以自己定义新排序函数，重载运算符即可</li>
+</ul>
+<h4 id="有序集合的访问与删除操作">有序集合的访问与删除操作</h4>
+<ul>
+<li>针对访问：迭代器访问</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;set&gt;
+using namespace std;
+set&lt;int&gt;test;
+test.begin();// 第一个元素
+test.end(); // 最后一个元素的后一个
+test.rend(); //反向迭代器第一个的前一个
+test.rbegin(); //反向迭代器的最后一个
+prev(test.end()); //最后一个元素<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>针对删除：迭代器删除</p>
+<p>注意erase的时候不能使用反向迭代器</p></li>
+</ul>
 
                 
             </div>
@@ -431,7 +501,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shangzz2001.github.io/4/">http://shangzz2001.github.io/4/</a>
+                    <a href="http://shangzz2001.github.io/5/">http://shangzz2001.github.io/5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,9 +646,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/5/">
                     <div class="card-image">
@@ -595,9 +666,62 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-18
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CS/" class="post-category">
+                                    CS
+                                </a>
+                            
+                            <a href="/categories/CS/OI/" class="post-category">
+                                    OI
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/OI/">
+                        <span class="chip bg-color">OI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/4/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="算法题解">
+                        
+                        <span class="card-title">算法题解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            写在开始
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -619,58 +743,6 @@
                     
                     <a href="/tags/OI/">
                         <span class="chip bg-color">OI</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Git入门学习">
-                        
-                        <span class="card-title">Git入门学习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            A brief introduction to Git learning
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/CS/" class="post-category">
-                                    CS
-                                </a>
-                            
-                            <a href="/categories/CS/Git/" class="post-category">
-                                    Git
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
