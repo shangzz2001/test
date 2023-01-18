@@ -342,28 +342,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/DSA/" title="DSA: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="DSA" style="background-color: #F9EBEA;">DSA
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%B1%87%E7%BC%96/" title="汇编: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="汇编" style="background-color: #F5EEF8;">汇编
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Git/" title="Git: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Git" style="background-color: #D5F5E3;">Git
+                            data-tagname="Git" style="background-color: #F9EBEA;">Git
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -372,16 +354,7 @@
                 <a href="/tags/OI/" title="OI: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="OI" style="background-color: #E8F8F5;">OI
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Docker/" title="Docker: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Docker" style="background-color: #FEF9E7;">Docker
+                            data-tagname="OI" style="background-color: #F5EEF8;">OI
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -390,7 +363,7 @@
                 <a href="/tags/Elasticsearch/" title="Elasticsearch: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Elasticsearch" style="background-color: #F8F9F9;">Elasticsearch
+                            data-tagname="Elasticsearch" style="background-color: #D5F5E3;">Elasticsearch
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -399,7 +372,7 @@
                 <a href="/tags/OOP/" title="OOP: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="OOP" style="background-color: #82E0AA;">OOP
+                            data-tagname="OOP" style="background-color: #E8F8F5;">OOP
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -428,7 +401,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"DSA","weight":1,"link":"/tags/DSA/"},{"text":"汇编","weight":1,"link":"/tags/汇编/"},{"text":"Git","weight":1,"link":"/tags/Git/"},{"text":"OI","weight":1,"link":"/tags/OI/"},{"text":"Docker","weight":1,"link":"/tags/Docker/"},{"text":"Elasticsearch","weight":1,"link":"/tags/Elasticsearch/"},{"text":"OOP","weight":1,"link":"/tags/OOP/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Git","weight":1,"link":"/tags/Git/"},{"text":"OI","weight":1,"link":"/tags/OI/"},{"text":"Elasticsearch","weight":1,"link":"/tags/Elasticsearch/"},{"text":"OOP","weight":1,"link":"/tags/OOP/"}], {
         autoResize: true
     });
 </script>
@@ -454,7 +427,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.7k</span>
+                        class="white-color">12.4k</span>
             
             
             
@@ -730,6 +703,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
