@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="アーカイブ: 2022/10, Odysseus">
-    <meta name="description" content="Blog of ZiZhi">
+    <meta name="keywords" content="概率论与数理统计-2, Odysseus">
+    <meta name="description" content="概率论与数理统计第二次课堂笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>アーカイブ: 2022/10 | Odysseus</title>
+    <title>概率论与数理统计-2 | Odysseus</title>
     <link rel="icon" type="image/png" href="/image/favicon.png">
     
     <style>
@@ -299,338 +299,596 @@
 </header>
 
     
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Welcome To My World
-                
-            </div>
 
-            <div class="description center-align">
-                
-                    <span id="jinrishici-sentence"></span>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">概率论与数理统计-2</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Math/">
+                                <span class="chip bg-color">Math</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Math/" class="post-category">
+                                Math
+                            </a>
+                        
+                            <a href="/categories/Math/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="post-category">
+                                概率论
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-03-02
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-03-02
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    941
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="概率论的公理化系统">5. 概率论的公理化系统</h3>
+<ul>
+<li>定义：</li>
+</ul>
+<p><span class="math display">\[
+P: \Im \rightarrow R \ \ 满足如下条件：\\
+(1)\ \  P(A)\ge0, \ \forall A \in \Im \ \\ 
+(2)\ \ P(\Omega) = 1 (\Omega为全域)\\
+(3)\ \ P(\sum_{i=1}^{\infin}A_{i}) = \sum_{i=1}^{\infin}P(A_{i}) \ \ (加法定理) \\
+\]</span></p>
+<p>满足如此条件，可以称 <span class="math inline">\(P\)</span> 为概率函数（如何证明一个函数是概率函数）</p>
+<ul>
+<li>衍生命题</li>
+</ul>
+<p><span class="math display">\[
+(1) \ P(A) \le 1,\forall A\in \Im \qquad 
+(2) \ P(\phi) = 0 \qquad
+(3) \ P(A) = 1 - P(A^c) \\
+(4) \ P(\sum_{i=1}^{\infin}A_{i}) = \sum_{i=1}^{\infin}P(A_{i}) \quad A_iA_j = \phi,\forall i \neq j \\
+(5) \ 两事件 A、B, \quad A\subset B \Rightarrow P(A)\le P(B) \\
+(6) \ P(A+B) = P(A)+P(B)-P(AB)
+\]</span></p>
+<p>对于第六点性质，存在推广的容斥定理： <span class="math display">\[
+P(\sum_{i=1}^nA_i) = \sum_{i=1}^nP(A_i) -\sum_{i_1&lt;i_2}P(A_{i_1}A_{i_2})+....
+\]</span> <strong>例子：配对问题</strong></p>
+<p>有 <span class="math inline">\(n\)</span> 个人，每人戴一顶帽子参加聚会，走的时候随机选择一顶帽子，请问：</p>
+<ol type="1">
+<li><p>没有人拿到自己帽子的概率是多少</p></li>
+<li><p>恰好有 <span class="math inline">\(k\)</span> 个人拿到自己的帽子的概率是多少</p></li>
+</ol>
+<p>解答：</p>
+<p>（1）令 <span class="math inline">\(A_i\)</span> 为第 <span class="math inline">\(i\)</span> 个人拿到自己的帽子的事件，所以 <span class="math inline">\(P(A) = \frac {1} {n}\)</span></p>
+<p>根据古典概型可以得到：<span class="math inline">\(P(A_{i_1}A_{i_2}....A_{i_r}) = \frac{(n-r)!}{n!}\)</span> <span class="math display">\[
+P_n = 1-(1-\frac{1}{2!}+\frac{1}{3!}-\frac{1}{4!}+...+(-1)^{n+1}\frac{1}{n!})
+\]</span> （2）恰好有 <span class="math inline">\(k\)</span> 个人拿到自己的帽子 <span class="math display">\[
+P=C_{n}^{k}P_{n-k}
+\]</span></p>
+<h3 id="条件概率">6. 条件概率</h3>
+<p><span class="math display">\[
+P(A|B) = \frac{P(AB)}{P(B)}( \ 需要 \ P(B)\gt 0 )
+\]</span></p>
+<ul>
+<li>计算
+<ul>
+<li>缩小样本空间</li>
+<li>根据定义进行计算</li>
+</ul></li>
+<li>性质</li>
+</ul>
+<p><span class="math display">\[
+P(AB)=P(A|B)P(B)=P(B|A)P(A)
+\]</span></p>
+<p><strong>例子</strong></p>
+<p>假设有 8 个红球，4 个白球，彼此之间无差别，进行一个无放回的摸球，取两个球都是红球的概率 <span class="math display">\[
+P(R_1R_2) = P(R_1)P(R_2|R_1) = \frac{8}{12}\times\frac{7}{11}
+\]</span> 将条件概率进行推广 <span class="math display">\[
+P(A_1A_2...A_n) = P(A_1)P(A_2|A_1)P(A_3|A_1A_2)...P(A_n|A_1A_2...A_{n-1})
+\]</span> 如此可以优化上面的配对问题算法</p>
+<p><strong>条件概率函数</strong></p>
+<p>给定 $B: P(B)，P(|B):,&nbsp;我们称&nbsp;P(|B) 为概率函数 $</p>
+<p>其中 <span class="math inline">\(P(A)\)</span> 与 <span class="math inline">\(P(A|B) 为一个先验和后验的过程\)</span>，对于一个已经观测到的事件 <span class="math inline">\(A\)</span>: <span class="math display">\[
+P(A|A)=1
+\]</span></p>
+<h3 id="独立事件">7. 独立事件</h3>
+<ul>
+<li><p>若 <span class="math inline">\(P(AB) = P(A)P(B)\)</span>, 则称事件 <span class="math inline">\(A, B\)</span> 相互独立.</p></li>
+<li><p>此时 <span class="math inline">\(P(A\mid B) = P(A)\)</span>, 即 <span class="math inline">\(\cfrac{P(AB)}{P(B)} = \cfrac{P(A\Omega)}{P(\Omega)}\)</span>, 事件 <span class="math inline">\(B\)</span> 的发生未改变 <span class="math inline">\(A\)</span> 发生的概率.</p></li>
+<li><p>若可从实际角度判断独立性, 则可应用定义中的关系式; 一般地, 利用定义判断独立性.</p></li>
+<li><p>事件 <span class="math inline">\(A, B\)</span> 相互独立, 则事件 <span class="math inline">\(A^c, B\)</span> 相互独立.</p></li>
+<li><p>推广:</p></li>
+<li><p><span class="math inline">\(A, B, C\,相互独立\Leftrightarrow P(ABC) = P(A)P(B)P(C)\,且\,A, B, C\,两两独立\)</span>.</p></li>
+<li><p><span class="math inline">\(A, B, C\,两两独立\nRightarrow A, B, C\,相互独立\)</span></p></li>
+<li><p>(反例) 甲乙两人抛掷 <span class="math inline">\(2\)</span> 枚硬币. <span class="math inline">\(A =\)</span> 甲正, <span class="math inline">\(B =\)</span> 乙正, <span class="math inline">\(C =\)</span> 甲乙同.</p>
+<blockquote>
+<p><span class="math inline">\(\textbf{定义}\)</span></p>
+<p><span class="math inline">\(A_1, A_2, \cdots, A_n\,相互独立\Leftrightarrow 任选\,m\,个事件\,A_{i_1}, A_{i_2},\cdots, A_{i_m}, P(A_{i_1}A_{i_2}\cdots A_{i_m}) = P(A_{i_1})P(A_{i_2})\cdots P(A_{i_m}).\)</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\textbf{定义}\)</span></p>
+<p><span class="math inline">\(A, B\)</span> 关于事件 <span class="math inline">\(E\)</span> 条件独立 <span class="math inline">\(\Leftrightarrow P(AB\mid E) = P(A\mid E)P(B\mid E)\)</span>.</p>
+<p>条件独立与独立不可互推.</p>
+</blockquote></li>
+<li><p>条件独立 <span class="math display">\[
+A,B\ 关于事件\ E条件独立\Longleftrightarrow P(AB|E)= P(A|E) \times P(B|E)
+\]</span> 条件独立和独立二者不能互相推导</p></li>
+</ul>
+<h3 id="bayes-公式">8. Bayes 公式</h3>
+<p>首先引入全概率公式的概念：</p>
+<blockquote>
+<p><span class="math inline">\(\textbf{全概率公式定义}\)</span></p>
+<p><span class="math inline">\(\textbf{对于} \ \Omega \textbf{的一个分割 B}:\)</span> <span class="math display">\[
+(1)\sum B_i =\Omega \qquad (2)B_iB_j=\phi,\forall i \ne j \qquad (3)P(B_i)&gt;0, \forall i
+\]</span> 我们有如下结论： <span class="math display">\[
+P(A) = P(\sum_i(AB_i))=\sum_iP(AB_i) = \sum_iP(A_i|B_i)P(B_i)\\
+P(B_i|A)=\frac{P(A|B_i)\cdot P(B_i)}{\sum P(A|B_j)P(B_j)}
+\]</span></p>
+</blockquote>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shangzz</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://shangzz2001.github.io/7/">http://shangzz2001.github.io/7/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Shangzz</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Math/">
+                                    <span class="chip bg-color">Math</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
-
+            
+        </div>
     </div>
-</div>
-
-
-<main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '8959bc633d876da815d0',
+        clientSecret: '7912a0ebfd3ff85c89f115d2adb23aef807c00a5',
+        repo: 'shangzz2001.github.io',
+        owner: 'shangzz2001',
+        admin: "shangzz2001",
+        id: '2023-03-02T19-26-23',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;Something for nothing
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            据说曹操有一匹好马叫做 “绝影”, 速度快得连影子都追不上它。那匹马应该是全身金色皮毛, 永远奔跑在阳光里, 光与暗的分际永远在它背后, 但是很久以后路明非才知道所谓 “绝影” 只是一个传说。布加迪威龙是世界上最快的跑车, 可它跑不过时间, 也跑不过早就已注定的命运。
-        </div>
-    </div>
-</div>
-
-                    
-
-                    
-                        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="music-player">
-    
-        <div class="title center-align">
-            <i class="fas fa-music"></i>&nbsp;&nbsp;求道之人，不问寒暑
-        </div>
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="tencent"
-                   type="playlist"
-                   id="8650165512"
-                   fixed='false'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
+                <a href="/7/">
+                    <div class="card-image">
                         
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="概率论与数理统计-2">
                         
-
-
-
-
-
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
-
-<div class="row">
-
-    
-    
-    <div class="col s12" >
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/4.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/CS/" class="category">CS</a>
-                        
-                            <a href="/categories/CS/OI/" class="category">OI</a>
-                        
-                    
-                </div>
-                <a href="/4/">
-                    <h3 class="post-title">Hello World</h3>
+                        <span class="card-title">概率论与数理统计-2</span>
+                    </div>
                 </a>
-                <p class="post-description">写在开始</p>
-                <a href="/4/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            概率论与数理统计第二次课堂笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Math/" class="post-category">
+                                    Math
+                                </a>
+                            
+                            <a href="/categories/Math/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="post-category">
+                                    概率论
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Math/">
+                        <span class="chip bg-color">Math</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/6/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C++ unordered_map">
+                        
+                        <span class="card-title">C++ unordered_map</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            有关Set与Multiset的一些用法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CS/" class="post-category">
+                                    CS
+                                </a>
+                            
+                            <a href="/categories/CS/OI/" class="post-category">
+                                    OI
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/OI/">
+                        <span class="chip bg-color">OI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
-    
+</article>
 
 </div>
 
 
-                    </div>
-                    
-                </div>
-            </div>
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
-    
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2/">
-                        <div class="card-image">
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Git入门学习">
-                            
-                            <span class="card-title">Git入门学习</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                A brief introduction to Git learning
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CS/" class="post-category">
-                                    CS
-                                </a>
-                                
-                                <a href="/categories/CS/Git/" class="post-category">
-                                    Git
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Git/">
-                            <span class="chip bg-color">Git</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/1/">
-                        <div class="card-image">
-                            
-                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Elasticsearch学习笔记">
-                            
-                            <span class="card-title">Elasticsearch学习笔记</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                软工Elasticsearch引擎开发学习
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CS/" class="post-category">
-                                    CS
-                                </a>
-                                
-                                <a href="/categories/CS/Elasticsearch/" class="post-category">
-                                    Elasticsearch
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Elasticsearch/">
-                            <span class="chip bg-color">Elasticsearch</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/3/">
-                        <div class="card-image">
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="OOP学习笔记">
-                            
-                            <span class="card-title">OOP学习笔记</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                THU CS OOP
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CS/" class="post-category">
-                                    CS
-                                </a>
-                                
-                                <a href="/categories/CS/OOP/" class="post-category">
-                                    OOP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/OOP/">
-                            <span class="chip bg-color">OOP</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-        </div>
-    </article>
 
 </main>
 

@@ -6,7 +6,7 @@
   <link href="http://shangzz2001.github.io/atom.xml" rel="self"/>
   
   <link href="http://shangzz2001.github.io/"/>
-  <updated>2023-02-01T03:32:59.386Z</updated>
+  <updated>2023-03-02T14:50:31.840Z</updated>
   <id>http://shangzz2001.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>概率论与数理统计-2</title>
+    <link href="http://shangzz2001.github.io/7/"/>
+    <id>http://shangzz2001.github.io/7/</id>
+    <published>2023-03-02T11:26:23.000Z</published>
+    <updated>2023-03-02T14:50:31.840Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;概率论的公理化系统&quot;&gt;5. 概率论的公理化系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;定义：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+P: \Im \rightarrow R \ \ 满足如下条件：\\
+(1)\ \ </summary>
+        
+      
+    
+    
+    
+    <category term="Math" scheme="http://shangzz2001.github.io/categories/Math/"/>
+    
+    <category term="概率论" scheme="http://shangzz2001.github.io/categories/Math/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+    <category term="Math" scheme="http://shangzz2001.github.io/tags/Math/"/>
+    
+  </entry>
   
   <entry>
     <title>C++ unordered_map</title>
