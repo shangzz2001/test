@@ -6,7 +6,7 @@
   <link href="http://shangzz2001.github.io/atom.xml" rel="self"/>
   
   <link href="http://shangzz2001.github.io/"/>
-  <updated>2023-03-02T14:54:48.141Z</updated>
+  <updated>2023-03-09T02:38:32.532Z</updated>
   <id>http://shangzz2001.github.io/</id>
   
   <author>
@@ -17,11 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>概率论与数理统计-3</title>
+    <link href="http://shangzz2001.github.io/8/"/>
+    <id>http://shangzz2001.github.io/8/</id>
+    <published>2023-03-09T11:26:23.000Z</published>
+    <updated>2023-03-09T02:38:32.532Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;review&quot;&gt;Review&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;概念：从随机试验开始，讲所有可能的事件组成一个集合，这就是样本空间 &lt;span class=&quot;math inline&quot;&gt;\(\Omega\)&lt;/span&gt;，讲样本空间的所有子集作为一个更大的集合</summary>
+        
+      
+    
+    
+    
+    <category term="Math" scheme="http://shangzz2001.github.io/categories/Math/"/>
+    
+    <category term="概率论" scheme="http://shangzz2001.github.io/categories/Math/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+    <category term="Math" scheme="http://shangzz2001.github.io/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI搜索算法</title>
+    <link href="http://shangzz2001.github.io/8/"/>
+    <id>http://shangzz2001.github.io/8/</id>
+    <published>2023-03-04T05:58:23.000Z</published>
+    <updated>2023-03-04T14:57:46.028Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;搜索&quot;&gt;搜索&lt;/h1&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://shangzz2001.github.io/categories/AI/"/>
+    
+    <category term="搜索" scheme="http://shangzz2001.github.io/categories/AI/%E6%90%9C%E7%B4%A2/"/>
+    
+    
+    <category term="搜索" scheme="http://shangzz2001.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>概率论与数理统计-2</title>
     <link href="http://shangzz2001.github.io/7/"/>
     <id>http://shangzz2001.github.io/7/</id>
     <published>2023-03-02T11:26:23.000Z</published>
-    <updated>2023-03-02T14:54:48.141Z</updated>
+    <updated>2023-03-09T02:39:19.788Z</updated>
     
     
       
