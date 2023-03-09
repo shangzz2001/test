@@ -6,7 +6,7 @@
   <link href="http://shangzz2001.github.io/atom.xml" rel="self"/>
   
   <link href="http://shangzz2001.github.io/"/>
-  <updated>2023-03-09T02:38:32.532Z</updated>
+  <updated>2023-03-09T03:23:57.163Z</updated>
   <id>http://shangzz2001.github.io/</id>
   
   <author>
@@ -21,16 +21,21 @@
     <link href="http://shangzz2001.github.io/8/"/>
     <id>http://shangzz2001.github.io/8/</id>
     <published>2023-03-09T11:26:23.000Z</published>
-    <updated>2023-03-09T02:38:32.532Z</updated>
+    <updated>2023-03-09T03:23:57.163Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;review&quot;&gt;Review&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;概念：从随机试验开始，讲所有可能的事件组成一个集合，这就是样本空间 &lt;span class=&quot;math inline&quot;&gt;\(\Omega\)&lt;/span&gt;，讲样本空间的所有子集作为一个更大的集合</summary>
+    <summary type="html">&lt;h1 id=&quot;chap2-随机变量&quot;&gt;Chap2 随机变量&lt;/h1&gt;
+&lt;h2 id=&quot;维随机变量&quot;&gt;1. (1维)随机变量&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;定义：样本空间上的实值函数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr</summary>
         
       
     
